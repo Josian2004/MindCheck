@@ -11,6 +11,10 @@
 		9EA7AD8229CAEF580065B0D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA7AD8129CAEF580065B0D5 /* ContentView.swift */; };
 		9EA7AD8429CAEF590065B0D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EA7AD8329CAEF590065B0D5 /* Assets.xcassets */; };
 		9EA7AD8729CAEF590065B0D5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EA7AD8629CAEF590065B0D5 /* Preview Assets.xcassets */; };
+		9EA7AD9429CAEF870065B0D5 /* MindCheckWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA7AD9329CAEF870065B0D5 /* MindCheckWatchApp.swift */; };
+		9EA7AD9629CAEF870065B0D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA7AD9529CAEF870065B0D5 /* ContentView.swift */; };
+		9EA7AD9829CAEF880065B0D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EA7AD9729CAEF880065B0D5 /* Assets.xcassets */; };
+		9EA7AD9B29CAEF880065B0D5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EA7AD9A29CAEF880065B0D5 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,10 +23,22 @@
 		9EA7AD8129CAEF580065B0D5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9EA7AD8329CAEF590065B0D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9EA7AD8629CAEF590065B0D5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9EA7AD9129CAEF870065B0D5 /* MindCheckWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MindCheckWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EA7AD9329CAEF870065B0D5 /* MindCheckWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindCheckWatchApp.swift; sourceTree = "<group>"; };
+		9EA7AD9529CAEF870065B0D5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9EA7AD9729CAEF880065B0D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9EA7AD9A29CAEF880065B0D5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		9EA7AD7929CAEF580065B0D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EA7AD8E29CAEF870065B0D5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				9EA7AD7E29CAEF580065B0D5 /* MindCheck */,
+				9EA7AD9229CAEF870065B0D5 /* MindCheckWatch Watch App */,
 				9EA7AD7D29CAEF580065B0D5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				9EA7AD7C29CAEF580065B0D5 /* MindCheck.app */,
+				9EA7AD9129CAEF870065B0D5 /* MindCheckWatch Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -63,6 +81,25 @@
 			isa = PBXGroup;
 			children = (
 				9EA7AD8629CAEF590065B0D5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9EA7AD9229CAEF870065B0D5 /* MindCheckWatch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				9EA7AD9329CAEF870065B0D5 /* MindCheckWatchApp.swift */,
+				9EA7AD9529CAEF870065B0D5 /* ContentView.swift */,
+				9EA7AD9729CAEF880065B0D5 /* Assets.xcassets */,
+				9EA7AD9929CAEF880065B0D5 /* Preview Content */,
+			);
+			path = "MindCheckWatch Watch App";
+			sourceTree = "<group>";
+		};
+		9EA7AD9929CAEF880065B0D5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				9EA7AD9A29CAEF880065B0D5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -87,6 +124,23 @@
 			productReference = 9EA7AD7C29CAEF580065B0D5 /* MindCheck.app */;
 			productType = "com.apple.product-type.application";
 		};
+		9EA7AD9029CAEF870065B0D5 /* MindCheckWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9EA7AD9C29CAEF880065B0D5 /* Build configuration list for PBXNativeTarget "MindCheckWatch Watch App" */;
+			buildPhases = (
+				9EA7AD8D29CAEF870065B0D5 /* Sources */,
+				9EA7AD8E29CAEF870065B0D5 /* Frameworks */,
+				9EA7AD8F29CAEF870065B0D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MindCheckWatch Watch App";
+			productName = "MindCheckWatch Watch App";
+			productReference = 9EA7AD9129CAEF870065B0D5 /* MindCheckWatch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -98,6 +152,9 @@
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					9EA7AD7B29CAEF580065B0D5 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					9EA7AD9029CAEF870065B0D5 = {
 						CreatedOnToolsVersion = 14.2;
 					};
 				};
@@ -116,6 +173,7 @@
 			projectRoot = "";
 			targets = (
 				9EA7AD7B29CAEF580065B0D5 /* MindCheck */,
+				9EA7AD9029CAEF870065B0D5 /* MindCheckWatch Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +188,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9EA7AD8F29CAEF870065B0D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EA7AD9B29CAEF880065B0D5 /* Preview Assets.xcassets in Resources */,
+				9EA7AD9829CAEF880065B0D5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -139,6 +206,15 @@
 			files = (
 				9EA7AD8229CAEF580065B0D5 /* ContentView.swift in Sources */,
 				9EA7AD8029CAEF580065B0D5 /* MindCheckApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EA7AD8D29CAEF870065B0D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EA7AD9629CAEF870065B0D5 /* ContentView.swift in Sources */,
+				9EA7AD9429CAEF870065B0D5 /* MindCheckWatchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +393,66 @@
 			};
 			name = Release;
 		};
+		9EA7AD9D29CAEF880065B0D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MindCheckWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = CE6JM5XH47;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MindCheckWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = .watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		9EA7AD9E29CAEF880065B0D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MindCheckWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = CE6JM5XH47;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MindCheckWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = .watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -334,6 +470,15 @@
 			buildConfigurations = (
 				9EA7AD8B29CAEF590065B0D5 /* Debug */,
 				9EA7AD8C29CAEF590065B0D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9EA7AD9C29CAEF880065B0D5 /* Build configuration list for PBXNativeTarget "MindCheckWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EA7AD9D29CAEF880065B0D5 /* Debug */,
+				9EA7AD9E29CAEF880065B0D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
