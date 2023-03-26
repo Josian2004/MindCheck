@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E3BF50029CFB949000972CE /* HomeUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3BF4FF29CFB949000972CE /* HomeUIView.swift */; };
+		9E82899329D05CC400A84C1F /* DiaryUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82899229D05CC400A84C1F /* DiaryUIView.swift */; };
+		9E82899629D05D8E00A84C1F /* DataUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82899529D05D8E00A84C1F /* DataUIView.swift */; };
+		9E82899929D05D9E00A84C1F /* SleepUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82899829D05D9E00A84C1F /* SleepUIView.swift */; };
 		9EA7AD8029CAEF580065B0D5 /* MindCheckApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA7AD7F29CAEF580065B0D5 /* MindCheckApp.swift */; };
-		9EA7AD8229CAEF580065B0D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA7AD8129CAEF580065B0D5 /* ContentView.swift */; };
 		9EA7AD8429CAEF590065B0D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EA7AD8329CAEF590065B0D5 /* Assets.xcassets */; };
 		9EA7AD8729CAEF590065B0D5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EA7AD8629CAEF590065B0D5 /* Preview Assets.xcassets */; };
 		9EA7AD9429CAEF870065B0D5 /* MindCheckWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA7AD9329CAEF870065B0D5 /* MindCheckWatchApp.swift */; };
@@ -18,9 +21,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E3BF4FF29CFB949000972CE /* HomeUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIView.swift; sourceTree = "<group>"; };
+		9E82899229D05CC400A84C1F /* DiaryUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryUIView.swift; sourceTree = "<group>"; };
+		9E82899529D05D8E00A84C1F /* DataUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUIView.swift; sourceTree = "<group>"; };
+		9E82899829D05D9E00A84C1F /* SleepUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepUIView.swift; sourceTree = "<group>"; };
 		9EA7AD7C29CAEF580065B0D5 /* MindCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EA7AD7F29CAEF580065B0D5 /* MindCheckApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindCheckApp.swift; sourceTree = "<group>"; };
-		9EA7AD8129CAEF580065B0D5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9EA7AD8329CAEF590065B0D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9EA7AD8629CAEF590065B0D5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9EA7AD9129CAEF870065B0D5 /* MindCheckWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MindCheckWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +54,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E3BF4FE29CFB91E000972CE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9E3BF4FF29CFB949000972CE /* HomeUIView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		9E82899129D05CAA00A84C1F /* Diary */ = {
+			isa = PBXGroup;
+			children = (
+				9E82899229D05CC400A84C1F /* DiaryUIView.swift */,
+			);
+			path = Diary;
+			sourceTree = "<group>";
+		};
+		9E82899429D05D7E00A84C1F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9E82899529D05D8E00A84C1F /* DataUIView.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		9E82899729D05D9300A84C1F /* Sleep */ = {
+			isa = PBXGroup;
+			children = (
+				9E82899829D05D9E00A84C1F /* SleepUIView.swift */,
+			);
+			path = Sleep;
+			sourceTree = "<group>";
+		};
 		9EA7AD7329CAEF580065B0D5 = {
 			isa = PBXGroup;
 			children = (
@@ -69,8 +107,11 @@
 		9EA7AD7E29CAEF580065B0D5 /* MindCheck */ = {
 			isa = PBXGroup;
 			children = (
+				9E82899729D05D9300A84C1F /* Sleep */,
+				9E82899429D05D7E00A84C1F /* Data */,
+				9E82899129D05CAA00A84C1F /* Diary */,
+				9E3BF4FE29CFB91E000972CE /* Home */,
 				9EA7AD7F29CAEF580065B0D5 /* MindCheckApp.swift */,
-				9EA7AD8129CAEF580065B0D5 /* ContentView.swift */,
 				9EA7AD8329CAEF590065B0D5 /* Assets.xcassets */,
 				9EA7AD8529CAEF590065B0D5 /* Preview Content */,
 			);
@@ -204,8 +245,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EA7AD8229CAEF580065B0D5 /* ContentView.swift in Sources */,
+				9E82899329D05CC400A84C1F /* DiaryUIView.swift in Sources */,
 				9EA7AD8029CAEF580065B0D5 /* MindCheckApp.swift in Sources */,
+				9E82899929D05D9E00A84C1F /* SleepUIView.swift in Sources */,
+				9E82899629D05D8E00A84C1F /* DataUIView.swift in Sources */,
+				9E3BF50029CFB949000972CE /* HomeUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
