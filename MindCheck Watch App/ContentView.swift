@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  MindCheckWatch Watch App
+//  MindCheck Watch App
 //
-//  Created by Josian van Efferen on 22/03/2023.
+//  Created by Josian van Efferen on 28/03/2023.
 //
 
 import SwiftUI

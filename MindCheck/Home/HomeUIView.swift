@@ -13,12 +13,16 @@ struct HomeUIView: View {
             ScrollView(.vertical) {
                 VStack(alignment: .leading) {
                     howAreYouFeeling()
+                    mentalEvent()
                     stressLevels()
-                    Spacer()
+                    asleep()
+                    outOfBed()
+                    Spacer().frame(minHeight: 20)
                 }
                 .navigationTitle("Home")
                 .padding(.horizontal, 20)
                 .padding(.top, 20.0)
+                //.padding(.bottom, 20)
                 .background(Color(UIColor.secondarySystemBackground))
             }
             .background(Color(UIColor.secondarySystemBackground))
@@ -36,52 +40,58 @@ private struct howAreYouFeeling: View {
             Label("How do you feel right now?", systemImage: "sun.max.fill")
                 .font(.headline)
                 .foregroundColor(.accentColor)
-                .padding(.all, 10)
+                .padding(.horizontal, 15)
+                .padding(.top, 10)
             
             HStack() {
                 
                 Button(action: {}) {
-                    Text("1")
+                    Image(systemName: "face.smiling")
                 }
                 .buttonStyle(.bordered)
                 .controlSize(.large)
+                .foregroundColor(Color(UIColor.systemRed))
                 
                 Spacer()
                 
                 Button(action: {}) {
-                    Text("2")
+                    Image(systemName: "face.smiling")
                 }
                 .buttonStyle(.bordered)
                 .controlSize(.large)
+                .foregroundColor(Color(UIColor.systemOrange))
                 
                 Spacer()
                 
                 Button(action: {}) {
-                    Text("3")
+                    Image(systemName: "face.smiling")
                 }
                 .buttonStyle(.bordered)
                 .controlSize(.large)
+                .foregroundColor(Color(UIColor.systemYellow))
                 
                 Spacer()
                 
                 Button(action: {}) {
-                    Text("4")
+                    Image(systemName: "face.smiling")
                 }
                 .buttonStyle(.bordered)
                 .controlSize(.large)
+                .foregroundColor(Color(UIColor.systemGreen))
                 
                 Spacer()
                 
                 Button(action: {}) {
-                    Text("5")
+                    Image(systemName: "face.smiling")
                 }
                 .buttonStyle(.bordered)
                 .controlSize(.large)
+                .foregroundColor(Color(UIColor.systemGreen))
                 
             }
             .padding([.leading, .trailing], 15)
-            .padding(.top, 5)
-            .padding(.bottom, 25)
+            .padding(.top, 10)
+            .padding(.bottom, 20)
             //.frame(width: .infinity)
             
         }
@@ -100,7 +110,7 @@ private struct howAreYouFeeling: View {
 private struct stressLevels: View {
     var body: some View {
         NavigationLink{
-            DataUIView()
+            StressDetailUIView()
         } label: {
             VStack(alignment: .leading) {
                 
@@ -108,7 +118,8 @@ private struct stressLevels: View {
                     Label("Stress Levels", systemImage: "brain.head.profile")
                         .font(.headline)
                         .foregroundColor(.accentColor)
-                    .padding([.horizontal, .top], 10)
+                    .padding([.horizontal], 15)
+                    .padding(.top, 10)
                     Spacer()
                     Image(systemName: "chevron.right")
                         .foregroundColor(Color(UIColor.systemGray4))
@@ -120,15 +131,46 @@ private struct stressLevels: View {
                     .font(.headline)
                     //.fontWeight(.semibold)
                     .foregroundColor(Color(UIColor.label))
-                    .padding(.horizontal, 10)
+                    .padding(.horizontal, 15)
                     .padding(.top, 1)
                     .multilineTextAlignment(.leading)
                 
                 Divider()
                     .padding(.horizontal, 10)
-                    .padding(.bottom, 25)
+                    .padding(.bottom, 10)
                 
-                Text("Test")
+                HStack {
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Text("87")
+                                .font(.title)
+                                .fontWeight(.semibold)
+                            Image(systemName: "chevron.up.circle.fill")
+                                .offset(x: -7)
+                                .font(.title3)
+                        }
+                        Text("Average Today")
+                            .foregroundColor(Color(UIColor.secondaryLabel))
+                            .font(.subheadline)
+                            .fontWeight(.semibold)
+                    }
+                    .foregroundColor(Color(UIColor.systemYellow))
+                    .padding(15)
+                    
+                    Divider().padding(10)
+                    
+                    VStack(alignment: .leading) {
+                        Text("57")
+                            .font(.title)
+                            .fontWeight(.semibold)
+                        Text("Average this week")
+                            .foregroundColor(Color(UIColor.secondaryLabel))
+                            .font(.subheadline)
+                            .fontWeight(.semibold)
+                    }
+                    .foregroundColor(Color(UIColor.systemGreen))
+                    .padding(10)
+                }.padding(.bottom, 5)
                 
             }
             .frame(
@@ -143,6 +185,283 @@ private struct stressLevels: View {
           minWidth: 0,
           maxWidth: .infinity,
           alignment: .leading)
+        .padding(.top, 5)
+        
+    }
+}
+
+
+private struct asleep: View {
+    var body: some View {
+        NavigationLink{
+            SleepDetailUIView()
+        } label: {
+            VStack(alignment: .leading) {
+                
+                HStack {
+                    Label("Asleep", systemImage: "bed.double.fill")
+                        .font(.headline)
+                        .foregroundColor(.accentColor)
+                    .padding([.horizontal], 15)
+                    .padding(.top, 10)
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .foregroundColor(Color(UIColor.systemGray4))
+                        .padding([.horizontal, .top], 10)
+                }
+                
+                
+                Text("You're averaging about the same amount of sleep today compared to the rest of the week.")
+                    .font(.headline)
+                    //.fontWeight(.semibold)
+                    .foregroundColor(Color(UIColor.label))
+                    .padding(.horizontal, 15)
+                    .padding(.top, 1)
+                    .multilineTextAlignment(.leading)
+                
+                Divider()
+                    .padding(.horizontal, 10)
+                    .padding(.bottom, 10)
+                
+                HStack {
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Text("8")
+                                .font(.title)
+                                .fontWeight(.semibold)
+                            + Text("hr")
+                                .font(.body)
+                                .fontWeight(.medium)
+                            
+                            Text("23")
+                                .font(.title)
+                                .fontWeight(.semibold)
+                            + Text("min")
+                                .font(.body)
+                                .fontWeight(.medium)
+                        }
+                            
+                        Text("Average Today")
+                            .foregroundColor(Color(UIColor.secondaryLabel))
+                            .font(.subheadline)
+                            .fontWeight(.semibold)
+                    }
+                    .foregroundColor(Color(UIColor.systemGreen))
+                    .padding(15)
+                    
+                    Divider().padding(10)
+                    
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Text("8")
+                                .font(.title)
+                                .fontWeight(.semibold)
+                            + Text("hr")
+                                .font(.body)
+                                .fontWeight(.medium)
+                            
+                            Text("5")
+                                .font(.title)
+                                .fontWeight(.semibold)
+                            + Text("min")
+                                .font(.body)
+                                .fontWeight(.medium)
+                        }
+
+                        Text("Average this week")
+                            .foregroundColor(Color(UIColor.secondaryLabel))
+                            .font(.subheadline)
+                            .fontWeight(.semibold)
+                    }
+                    .foregroundColor(Color(UIColor.systemGreen))
+                    .padding(10)
+                }.padding(.bottom, 5)
+                
+            }
+            .frame(
+              minWidth: 0,
+              maxWidth: .infinity,
+              alignment: .leading
+            )
+            .background(Color(UIColor.systemBackground), ignoresSafeAreaEdges: [])
+            .cornerRadius(10)
+        }
+        .frame(
+          minWidth: 0,
+          maxWidth: .infinity,
+          alignment: .leading)
+        .padding(.top, 5)
+        
+    }
+}
+
+
+private struct outOfBed: View {
+    var body: some View {
+        NavigationLink{
+            SleepDetailUIView()
+        } label: {
+            VStack(alignment: .leading) {
+                
+                HStack {
+                    Label("Out of Bed", systemImage: "bed.double.fill")
+                        .font(.headline)
+                        .foregroundColor(.accentColor)
+                    .padding([.horizontal], 15)
+                    .padding(.top, 10)
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .foregroundColor(Color(UIColor.systemGray4))
+                        .padding([.horizontal, .top], 10)
+                }
+                
+                
+                Text("I noticed that you had some troubles getting out of bed this morning.")
+                    .font(.headline)
+                    //.fontWeight(.semibold)
+                    .foregroundColor(Color(UIColor.label))
+                    .padding(.horizontal, 15)
+                    .padding(.top, 1)
+                    .multilineTextAlignment(.leading)
+                
+                Divider()
+                    .padding(.horizontal, 10)
+                    .padding(.bottom, 10)
+                
+                HStack {
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Text("2")
+                                .font(.title)
+                                .fontWeight(.semibold)
+                            + Text("hr")
+                                .font(.body)
+                                .fontWeight(.medium)
+                            
+                            Text("13")
+                                .font(.title)
+                                .fontWeight(.semibold)
+                            + Text("min")
+                                .font(.body)
+                                .fontWeight(.medium)
+                        }
+                            
+                        Text("Average Today")
+                            .foregroundColor(Color(UIColor.secondaryLabel))
+                            .font(.subheadline)
+                            .fontWeight(.semibold)
+                    }
+                    .foregroundColor(Color(UIColor.systemRed))
+                    .padding(15)
+                    
+                    Divider().padding(10)
+                    
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Text("1")
+                                .font(.title)
+                                .fontWeight(.semibold)
+                            + Text("hr")
+                                .font(.body)
+                                .fontWeight(.medium)
+                            
+                            Text("13")
+                                .font(.title)
+                                .fontWeight(.semibold)
+                            + Text("min")
+                                .font(.body)
+                                .fontWeight(.medium)
+                        }
+
+                        Text("Average this week")
+                            .foregroundColor(Color(UIColor.secondaryLabel))
+                            .font(.subheadline)
+                            .fontWeight(.semibold)
+                    }
+                    .foregroundColor(Color(UIColor.systemYellow))
+                    .padding(10)
+                }.padding(.bottom, 5)
+                
+            }
+            .frame(
+              minWidth: 0,
+              maxWidth: .infinity,
+              alignment: .leading
+            )
+            .background(Color(UIColor.systemBackground), ignoresSafeAreaEdges: [])
+            .cornerRadius(10)
+        }
+        .frame(
+          minWidth: 0,
+          maxWidth: .infinity,
+          alignment: .leading)
+        .padding(.top, 5)
+        
+    }
+}
+
+
+
+private struct mentalEvent: View {
+    var body: some View {
+        NavigationLink{
+            MentalEventsDetailUIView()
+        } label: {
+            VStack(alignment: .leading) {
+                
+                HStack {
+                    Label("Mental Health Events", systemImage: "staroflife.fill")
+                        .font(.headline)
+                        .foregroundColor(.accentColor)
+                    .padding([.horizontal], 15)
+                    .padding(.top, 10)
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .foregroundColor(Color(UIColor.systemGray4))
+                        .padding([.horizontal, .top], 10)
+                }
+                
+                
+                Text("Here you can keep track of things like feelings of anxiety or depression, panic attacks, etc.")
+                    .font(.headline)
+                    //.fontWeight(.semibold)
+                    .foregroundColor(Color(UIColor.label))
+                    .padding(.horizontal, 15)
+                    .padding(.top, 1)
+                    .multilineTextAlignment(.leading)
+                
+                Divider()
+                    .padding(.horizontal, 10)
+                    .padding(.bottom, 10)
+                
+                
+                Button(action: {}) {
+                    Text("I'm going trough something right now")
+                        .foregroundColor(Color(UIColor.white))
+                        .fontWeight(.semibold)
+                        .font(.body)
+                }
+                .buttonStyle(.bordered)
+                .buttonBorderShape(.roundedRectangle(radius: 15))
+                .controlSize(.large)
+                .background(Color.accentColor)
+                .cornerRadius(15)
+                .frame(minWidth: 0, maxWidth: .infinity)
+                .padding(.bottom, 20)
+            }
+            .frame(
+              minWidth: 0,
+              maxWidth: .infinity,
+              alignment: .leading
+            )
+            .background(Color(UIColor.systemBackground), ignoresSafeAreaEdges: [])
+            .cornerRadius(10)
+        }
+        .frame(
+          minWidth: 0,
+          maxWidth: .infinity,
+          alignment: .leading)
+        .padding(.top, 5)
         
     }
 }
