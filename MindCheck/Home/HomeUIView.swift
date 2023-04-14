@@ -22,8 +22,7 @@ struct HomeUIView: View {
                 .navigationTitle("Home")
                 .padding(.horizontal, 20)
                 .padding(.top, 20.0)
-                //.padding(.bottom, 20)
-                .background(Color(UIColor.secondarySystemBackground))
+                .frame(minWidth: 0, maxWidth: .infinity)
             }
             .background(Color(UIColor.secondarySystemBackground))
         }
@@ -134,6 +133,7 @@ private struct stressLevels: View {
                     .padding(.horizontal, 15)
                     .padding(.top, 1)
                     .multilineTextAlignment(.leading)
+                    .fixedSize(horizontal: false, vertical: true)
                 
                 Divider()
                     .padding(.horizontal, 10)
@@ -212,6 +212,7 @@ private struct asleep: View {
                 
                 
                 Text("You're averaging about the same amount of sleep today compared to the rest of the week.")
+                    .fixedSize(horizontal: false, vertical: true)
                     .font(.headline)
                     //.fontWeight(.semibold)
                     .foregroundColor(Color(UIColor.label))
@@ -317,6 +318,7 @@ private struct outOfBed: View {
                 
                 
                 Text("I noticed that you had some troubles getting out of bed this morning.")
+                    .fixedSize(horizontal: false, vertical: true)
                     .font(.headline)
                     //.fontWeight(.semibold)
                     .foregroundColor(Color(UIColor.label))
@@ -423,6 +425,7 @@ private struct mentalEvent: View {
                 
                 
                 Text("Here you can keep track of things like feelings of anxiety or depression, panic attacks, etc.")
+                    .fixedSize(horizontal: false, vertical: true)
                     .font(.headline)
                     //.fontWeight(.semibold)
                     .foregroundColor(Color(UIColor.label))

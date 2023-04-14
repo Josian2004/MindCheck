@@ -18,8 +18,7 @@ struct DataUIView: View {
                 .navigationTitle("Data")
                 .padding(.horizontal, 20)
                 .padding(.top, 20.0)
-                //.padding(.bottom, 20)
-                .background(Color(UIColor.secondarySystemBackground))
+                .frame(minWidth: 0, maxWidth: .infinity)
             }
             .background(Color(UIColor.secondarySystemBackground))
         }
