@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeUIView: View {
+    private var vm: HomeViewModel = HomeViewModel()
     var body: some View {
         NavigationStack {
             ScrollView(.vertical) {
@@ -15,7 +16,7 @@ struct HomeUIView: View {
                     howAreYouFeeling()
                     mentalEvent()
                     stressLevels()
-                    asleep()
+                    asleep(vm: vm)
                     outOfBed()
                     Spacer().frame(minHeight: 20)
                 }
@@ -25,6 +26,8 @@ struct HomeUIView: View {
                 .frame(minWidth: 0, maxWidth: .infinity)
             }
             .background(Color(UIColor.secondarySystemBackground))
+        }.onAppear() {
+            vm.updateSleepWidget()
         }
     }
 }
@@ -192,6 +195,7 @@ private struct stressLevels: View {
 
 
 private struct asleep: View {
+    @ObservedObject var vm: HomeViewModel
     var body: some View {
         NavigationLink{
             SleepDetailUIView()
@@ -227,14 +231,14 @@ private struct asleep: View {
                 HStack {
                     VStack(alignment: .leading) {
                         HStack {
-                            Text("8")
+                            Text(String(vm.asleepToday.hours))
                                 .font(.title)
                                 .fontWeight(.semibold)
                             + Text("hr")
                                 .font(.body)
                                 .fontWeight(.medium)
                             
-                            Text("23")
+                            Text(String(vm.asleepToday.minutes))
                                 .font(.title)
                                 .fontWeight(.semibold)
                             + Text("min")
@@ -242,7 +246,7 @@ private struct asleep: View {
                                 .fontWeight(.medium)
                         }
                             
-                        Text("Average Today")
+                        Text("Today")
                             .foregroundColor(Color(UIColor.secondaryLabel))
                             .font(.subheadline)
                             .fontWeight(.semibold)
@@ -254,14 +258,14 @@ private struct asleep: View {
                     
                     VStack(alignment: .leading) {
                         HStack {
-                            Text("8")
+                            Text(String(vm.asleepAvrWeek.hours))
                                 .font(.title)
                                 .fontWeight(.semibold)
                             + Text("hr")
                                 .font(.body)
                                 .fontWeight(.medium)
                             
-                            Text("5")
+                            Text(String(vm.asleepAvrWeek.minutes))
                                 .font(.title)
                                 .fontWeight(.semibold)
                             + Text("min")

@@ -16,6 +16,11 @@
 		9E37032829D32DB300811D97 /* StressDetailUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E37032729D32DB300811D97 /* StressDetailUIView.swift */; };
 		9E37032A29D32DBE00811D97 /* SleepDetailUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E37032929D32DBE00811D97 /* SleepDetailUIView.swift */; };
 		9E3BF50029CFB949000972CE /* HomeUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3BF4FF29CFB949000972CE /* HomeUIView.swift */; };
+		9E5A5F4B29EEBF4D0098CAA2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5A5F4A29EEBF4D0098CAA2 /* HomeViewModel.swift */; };
+		9E5A5F4F29EEC9D20098CAA2 /* NightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5A5F4E29EEC9D20098CAA2 /* NightModel.swift */; };
+		9E5A5F5129EECABE0098CAA2 /* SleepSegmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5A5F5029EECABE0098CAA2 /* SleepSegmentModel.swift */; };
+		9E5A5F5629EEF2DD0098CAA2 /* SleepRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5A5F5529EEF2DD0098CAA2 /* SleepRepository.swift */; };
+		9E5A5F6029EEFBA10098CAA2 /* SleepService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5A5F5F29EEFBA10098CAA2 /* SleepService.swift */; };
 		9E82899329D05CC400A84C1F /* DiaryUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82899229D05CC400A84C1F /* DiaryUIView.swift */; };
 		9E82899629D05D8E00A84C1F /* DataUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82899529D05D8E00A84C1F /* DataUIView.swift */; };
 		9E82899929D05D9E00A84C1F /* SleepUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82899829D05D9E00A84C1F /* SleepUIView.swift */; };
@@ -35,6 +40,13 @@
 		9E37032729D32DB300811D97 /* StressDetailUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StressDetailUIView.swift; sourceTree = "<group>"; };
 		9E37032929D32DBE00811D97 /* SleepDetailUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepDetailUIView.swift; sourceTree = "<group>"; };
 		9E3BF4FF29CFB949000972CE /* HomeUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIView.swift; sourceTree = "<group>"; };
+		9E5A5F4A29EEBF4D0098CAA2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		9E5A5F4C29EEC5B00098CAA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9E5A5F4D29EEC7560098CAA2 /* MindCheck.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MindCheck.entitlements; sourceTree = "<group>"; };
+		9E5A5F4E29EEC9D20098CAA2 /* NightModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightModel.swift; sourceTree = "<group>"; };
+		9E5A5F5029EECABE0098CAA2 /* SleepSegmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepSegmentModel.swift; sourceTree = "<group>"; };
+		9E5A5F5529EEF2DD0098CAA2 /* SleepRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepRepository.swift; sourceTree = "<group>"; };
+		9E5A5F5F29EEFBA10098CAA2 /* SleepService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepService.swift; sourceTree = "<group>"; };
 		9E82899229D05CC400A84C1F /* DiaryUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryUIView.swift; sourceTree = "<group>"; };
 		9E82899529D05D8E00A84C1F /* DataUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUIView.swift; sourceTree = "<group>"; };
 		9E82899829D05D9E00A84C1F /* SleepUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepUIView.swift; sourceTree = "<group>"; };
@@ -128,8 +140,71 @@
 			isa = PBXGroup;
 			children = (
 				9E3BF4FF29CFB949000972CE /* HomeUIView.swift */,
+				9E5A5F4A29EEBF4D0098CAA2 /* HomeViewModel.swift */,
+				9E5A5F4E29EEC9D20098CAA2 /* NightModel.swift */,
+				9E5A5F5029EECABE0098CAA2 /* SleepSegmentModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		9E5A5F5229EEF1970098CAA2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9E37031C29D32C1F00811D97 /* Detail */,
+				9E82899729D05D9300A84C1F /* Sleep */,
+				9E82899429D05D7E00A84C1F /* Data */,
+				9E82899129D05CAA00A84C1F /* Diary */,
+				9E3BF4FE29CFB91E000972CE /* Home */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9E5A5F5329EEF1B10098CAA2 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				9E5A5F5F29EEFBA10098CAA2 /* SleepService.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		9E5A5F5429EEF1B80098CAA2 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9E5A5F5A29EEF3240098CAA2 /* MentalEvents */,
+				9E5A5F5929EEF31F0098CAA2 /* Mood */,
+				9E5A5F5829EEF3170098CAA2 /* Stress */,
+				9E5A5F5729EEF3040098CAA2 /* Sleep */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		9E5A5F5729EEF3040098CAA2 /* Sleep */ = {
+			isa = PBXGroup;
+			children = (
+				9E5A5F5529EEF2DD0098CAA2 /* SleepRepository.swift */,
+			);
+			path = Sleep;
+			sourceTree = "<group>";
+		};
+		9E5A5F5829EEF3170098CAA2 /* Stress */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Stress;
+			sourceTree = "<group>";
+		};
+		9E5A5F5929EEF31F0098CAA2 /* Mood */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mood;
+			sourceTree = "<group>";
+		};
+		9E5A5F5A29EEF3240098CAA2 /* MentalEvents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MentalEvents;
 			sourceTree = "<group>";
 		};
 		9E82899129D05CAA00A84C1F /* Diary */ = {
@@ -177,11 +252,11 @@
 		9EA7AD7E29CAEF580065B0D5 /* MindCheck */ = {
 			isa = PBXGroup;
 			children = (
-				9E37031C29D32C1F00811D97 /* Detail */,
-				9E82899729D05D9300A84C1F /* Sleep */,
-				9E82899429D05D7E00A84C1F /* Data */,
-				9E82899129D05CAA00A84C1F /* Diary */,
-				9E3BF4FE29CFB91E000972CE /* Home */,
+				9E5A5F5429EEF1B80098CAA2 /* Data */,
+				9E5A5F5329EEF1B10098CAA2 /* Domain */,
+				9E5A5F5229EEF1970098CAA2 /* View */,
+				9E5A5F4D29EEC7560098CAA2 /* MindCheck.entitlements */,
+				9E5A5F4C29EEC5B00098CAA2 /* Info.plist */,
 				9EA7AD7F29CAEF580065B0D5 /* MindCheckApp.swift */,
 				9EA7AD8329CAEF590065B0D5 /* Assets.xcassets */,
 				9EA7AD8529CAEF590065B0D5 /* Preview Content */,
@@ -309,12 +384,17 @@
 				9E82899329D05CC400A84C1F /* DiaryUIView.swift in Sources */,
 				9E37032629D32DA800811D97 /* MoodDetailUIView.swift in Sources */,
 				9EA7AD8029CAEF580065B0D5 /* MindCheckApp.swift in Sources */,
+				9E5A5F4B29EEBF4D0098CAA2 /* HomeViewModel.swift in Sources */,
 				9E37032829D32DB300811D97 /* StressDetailUIView.swift in Sources */,
 				9E82899929D05D9E00A84C1F /* SleepUIView.swift in Sources */,
+				9E5A5F6029EEFBA10098CAA2 /* SleepService.swift in Sources */,
 				9E82899629D05D8E00A84C1F /* DataUIView.swift in Sources */,
+				9E5A5F5129EECABE0098CAA2 /* SleepSegmentModel.swift in Sources */,
 				9E37032A29D32DBE00811D97 /* SleepDetailUIView.swift in Sources */,
 				9E3BF50029CFB949000972CE /* HomeUIView.swift in Sources */,
+				9E5A5F5629EEF2DD0098CAA2 /* SleepRepository.swift in Sources */,
 				9E37032229D32D8D00811D97 /* MentalEventsDetailUIView.swift in Sources */,
+				9E5A5F4F29EEC9D20098CAA2 /* NightModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,17 +580,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MindCheck/MindCheck.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MindCheck/Preview Content\"";
 				DEVELOPMENT_TEAM = CE6JM5XH47;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MindCheck/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MindCheck;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "To analyse your sleep and stress levels, this app wants to read your health data.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -529,17 +615,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MindCheck/MindCheck.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MindCheck/Preview Content\"";
 				DEVELOPMENT_TEAM = CE6JM5XH47;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MindCheck/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MindCheck;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "To analyse your sleep and stress levels, this app wants to read your health data.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
