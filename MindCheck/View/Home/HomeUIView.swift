@@ -300,7 +300,6 @@ private struct asleep: View {
     }
 }
 
-
 private struct outOfBed: View {
     var body: some View {
         NavigationLink{

@@ -21,6 +21,11 @@
 		9E5A5F5129EECABE0098CAA2 /* SleepSegmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5A5F5029EECABE0098CAA2 /* SleepSegmentModel.swift */; };
 		9E5A5F5629EEF2DD0098CAA2 /* SleepRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5A5F5529EEF2DD0098CAA2 /* SleepRepository.swift */; };
 		9E5A5F6029EEFBA10098CAA2 /* SleepService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5A5F5F29EEFBA10098CAA2 /* SleepService.swift */; };
+		9E76FD2D29F7EEEF00A02889 /* MindCheck.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9E76FD2B29F7EEEF00A02889 /* MindCheck.xcdatamodeld */; };
+		9E76FD3E29F810F100A02889 /* DiaryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E76FD3D29F810F100A02889 /* DiaryRepository.swift */; };
+		9E76FD4329F814D100A02889 /* DiaryEntryDTO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E76FD4129F814D100A02889 /* DiaryEntryDTO+CoreDataClass.swift */; };
+		9E76FD4429F814D100A02889 /* DiaryEntryDTO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E76FD4229F814D100A02889 /* DiaryEntryDTO+CoreDataProperties.swift */; };
+		9E76FD4829F8175300A02889 /* DiaryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E76FD4729F8175300A02889 /* DiaryEntry.swift */; };
 		9E82899329D05CC400A84C1F /* DiaryUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82899229D05CC400A84C1F /* DiaryUIView.swift */; };
 		9E82899629D05D8E00A84C1F /* DataUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82899529D05D8E00A84C1F /* DataUIView.swift */; };
 		9E82899929D05D9E00A84C1F /* SleepUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82899829D05D9E00A84C1F /* SleepUIView.swift */; };
@@ -47,6 +52,11 @@
 		9E5A5F5029EECABE0098CAA2 /* SleepSegmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepSegmentModel.swift; sourceTree = "<group>"; };
 		9E5A5F5529EEF2DD0098CAA2 /* SleepRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepRepository.swift; sourceTree = "<group>"; };
 		9E5A5F5F29EEFBA10098CAA2 /* SleepService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepService.swift; sourceTree = "<group>"; };
+		9E76FD2C29F7EEEF00A02889 /* MindCheck.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MindCheck.xcdatamodel; sourceTree = "<group>"; };
+		9E76FD3D29F810F100A02889 /* DiaryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryRepository.swift; sourceTree = "<group>"; };
+		9E76FD4129F814D100A02889 /* DiaryEntryDTO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiaryEntryDTO+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		9E76FD4229F814D100A02889 /* DiaryEntryDTO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiaryEntryDTO+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		9E76FD4729F8175300A02889 /* DiaryEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryEntry.swift; sourceTree = "<group>"; };
 		9E82899229D05CC400A84C1F /* DiaryUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryUIView.swift; sourceTree = "<group>"; };
 		9E82899529D05D8E00A84C1F /* DataUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUIView.swift; sourceTree = "<group>"; };
 		9E82899829D05D9E00A84C1F /* SleepUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepUIView.swift; sourceTree = "<group>"; };
@@ -141,8 +151,6 @@
 			children = (
 				9E3BF4FF29CFB949000972CE /* HomeUIView.swift */,
 				9E5A5F4A29EEBF4D0098CAA2 /* HomeViewModel.swift */,
-				9E5A5F4E29EEC9D20098CAA2 /* NightModel.swift */,
-				9E5A5F5029EECABE0098CAA2 /* SleepSegmentModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -162,7 +170,8 @@
 		9E5A5F5329EEF1B10098CAA2 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				9E5A5F5F29EEFBA10098CAA2 /* SleepService.swift */,
+				9E76FD4529F8174300A02889 /* Diary */,
+				9E76FD3F29F8126000A02889 /* Sleep */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -170,6 +179,8 @@
 		9E5A5F5429EEF1B80098CAA2 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				9E76FD3829F7F89400A02889 /* Diary */,
+				9E76FD2B29F7EEEF00A02889 /* MindCheck.xcdatamodeld */,
 				9E5A5F5A29EEF3240098CAA2 /* MentalEvents */,
 				9E5A5F5929EEF31F0098CAA2 /* Mood */,
 				9E5A5F5829EEF3170098CAA2 /* Stress */,
@@ -205,6 +216,50 @@
 			children = (
 			);
 			path = MentalEvents;
+			sourceTree = "<group>";
+		};
+		9E76FD3829F7F89400A02889 /* Diary */ = {
+			isa = PBXGroup;
+			children = (
+				9E76FD4129F814D100A02889 /* DiaryEntryDTO+CoreDataClass.swift */,
+				9E76FD4229F814D100A02889 /* DiaryEntryDTO+CoreDataProperties.swift */,
+				9E76FD3D29F810F100A02889 /* DiaryRepository.swift */,
+			);
+			path = Diary;
+			sourceTree = "<group>";
+		};
+		9E76FD3F29F8126000A02889 /* Sleep */ = {
+			isa = PBXGroup;
+			children = (
+				9E5A5F5F29EEFBA10098CAA2 /* SleepService.swift */,
+				9E76FD4029F8126700A02889 /* Models */,
+			);
+			path = Sleep;
+			sourceTree = "<group>";
+		};
+		9E76FD4029F8126700A02889 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9E5A5F4E29EEC9D20098CAA2 /* NightModel.swift */,
+				9E5A5F5029EECABE0098CAA2 /* SleepSegmentModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9E76FD4529F8174300A02889 /* Diary */ = {
+			isa = PBXGroup;
+			children = (
+				9E76FD4629F8174800A02889 /* Models */,
+			);
+			path = Diary;
+			sourceTree = "<group>";
+		};
+		9E76FD4629F8174800A02889 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9E76FD4729F8175300A02889 /* DiaryEntry.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		9E82899129D05CAA00A84C1F /* Diary */ = {
@@ -385,16 +440,21 @@
 				9E37032629D32DA800811D97 /* MoodDetailUIView.swift in Sources */,
 				9EA7AD8029CAEF580065B0D5 /* MindCheckApp.swift in Sources */,
 				9E5A5F4B29EEBF4D0098CAA2 /* HomeViewModel.swift in Sources */,
+				9E76FD4329F814D100A02889 /* DiaryEntryDTO+CoreDataClass.swift in Sources */,
 				9E37032829D32DB300811D97 /* StressDetailUIView.swift in Sources */,
 				9E82899929D05D9E00A84C1F /* SleepUIView.swift in Sources */,
 				9E5A5F6029EEFBA10098CAA2 /* SleepService.swift in Sources */,
 				9E82899629D05D8E00A84C1F /* DataUIView.swift in Sources */,
 				9E5A5F5129EECABE0098CAA2 /* SleepSegmentModel.swift in Sources */,
+				9E76FD4429F814D100A02889 /* DiaryEntryDTO+CoreDataProperties.swift in Sources */,
 				9E37032A29D32DBE00811D97 /* SleepDetailUIView.swift in Sources */,
 				9E3BF50029CFB949000972CE /* HomeUIView.swift in Sources */,
+				9E76FD4829F8175300A02889 /* DiaryEntry.swift in Sources */,
+				9E76FD2D29F7EEEF00A02889 /* MindCheck.xcdatamodeld in Sources */,
 				9E5A5F5629EEF2DD0098CAA2 /* SleepRepository.swift in Sources */,
 				9E37032229D32D8D00811D97 /* MentalEventsDetailUIView.swift in Sources */,
 				9E5A5F4F29EEC9D20098CAA2 /* NightModel.swift in Sources */,
+				9E76FD3E29F810F100A02889 /* DiaryRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -676,6 +736,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9E76FD2B29F7EEEF00A02889 /* MindCheck.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9E76FD2C29F7EEEF00A02889 /* MindCheck.xcdatamodel */,
+			);
+			currentVersion = 9E76FD2C29F7EEEF00A02889 /* MindCheck.xcdatamodel */;
+			path = MindCheck.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9EA7AD7429CAEF580065B0D5 /* Project object */;
 }

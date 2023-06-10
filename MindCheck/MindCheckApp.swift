@@ -7,6 +7,7 @@
 
 import SwiftUI
 import HealthKit
+import CoreData
 
 class TimeViewObject {
     let hours: Int
@@ -22,16 +23,25 @@ final class Provider: NSObject {
     static let healthStoreInstance = HKHealthStore()
     static let sleepRepositoryInstance = SleepRepository()
     static let sleepServiceInstance = SleepService()
+    static let coreDataContainerInstance = NSPersistentContainer(name: "MindCheck")
 }
 
 @main
 struct MindCheckApp: App {
     private let healthStore: HKHealthStore
+    private let coreDataContainer: NSPersistentContainer
     init() {
         guard HKHealthStore.isHealthDataAvailable() else {  fatalError("This app requires a device that supports HealthKit") }
         healthStore = Provider.healthStoreInstance
+        coreDataContainer = Provider.coreDataContainerInstance
         requestHealthkitPermissions()
+        coreDataContainer.loadPersistentStores { storeDescription, error in
+            if let error = error {
+                print("Unresolved error \(error)")
+            }
+        }
     }
+    
     
     
     private func requestHealthkitPermissions() {
